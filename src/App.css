@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body{
+    background-color:#F93318;
+    margin:0;
+    height:100%;
+}
+
+:root{
+    --bordercolor: #f7d51d;
+    --borderpx:8px;
+}
+
+/*.App > div{
+    position:absolute;
+}*/
+
+.App *{
+    font-family: 'Press Start 2P';
+    font-size:0.85em;
+}
+.main_pokeContainer{
+    max-width:35rem;
+}
+
+
+.box_8bit{
+    margin-top:1rem;
+    display:block;
+    width: 60%;
+    border-left: var(--borderpx) solid var(--bordercolor);
+    border-right: var(--borderpx) solid var(--bordercolor);
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+     
+    .box_8bit .wrapper{
+    display: block;
+    color:var(--bordercolor);
+    padding: 40px;
+    margin: -10px 0;
+    border-top: var(--borderpx) solid var(--bordercolor);
+    border-bottom: var(--borderpx) solid var(--bordercolor);
+    }
+     
+    .box_8bit::before,
+    .box_8bit::after,
+    .box_8bit .wrapper::before,
+    .box_8bit .wrapper::after{
+    content: '';
+    width: var(--borderpx);
+    height: var(--borderpx);
+    display: block;
+    position: absolute;
+    background:var(--bordercolor);
+    }
+    .box_8bit::before{ top: -5px; left: -5px; }
+    .box_8bit::after{ top: -5px; right: -5px; }
+    .box_8bit .wrapper::before{ bottom: -5px; left: -5px; }
+    .box_8bit .wrapper::after{ bottom: -5px; right: -5px; }
+
+    @media screen and (min-width:500px){
+        body{
+            background:url("body_bg.png");
+        }
+    }
+
+    @media screen and (max-width:500px){
+        body{
+            background:#F93318;
+        }
+        .main_pokeContainer{
+            max-width: 100%;
+        }
+        .box_8bit{
+            width:18rem;
+        }
+
+    }
